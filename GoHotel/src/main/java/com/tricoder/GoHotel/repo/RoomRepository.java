@@ -1,0 +1,24 @@
+package com.tricoder.GoHotel.repo;
+
+import com.tricoder.GoHotel.entity.Room;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public interface RoomRepository extends JpaRepository<Room, Long> {
+
+    //Lay danh sach cac loai phong khong lap lai(roomType)
+    @Query("SELECT DISTINCT r.roomType FROM Room r")
+    List<String> findDistinctRoomTypes();
+
+    //Danh sach cac phong co san theo ngay nhan va ngay tra phong
+    @Query("SELECT r FROM Room r WHERE r.roomType LIKE %:roomType% AND r.id NOT IN (SELECT bk.room.id FROM Booking bk WHERE" +
+            "(bk.checkInDate <= :checkOutDate) AND (bk.checkOutDate >= :checkInDate))")
+    List<Room> findAvailableRoomsByDatesAndTypes(LocalDate checkInDate, LocalDate checkOutDate, String roomType);
+
+    //Lay danh sach tat ca cac phong chua duoc dat
+    @Query("SELECT r FROM Room r WHERE r.id NOT IN (SELECT b.room.id FROM Booking b)")
+    List<Room> getAllAvailableRooms();
+}
