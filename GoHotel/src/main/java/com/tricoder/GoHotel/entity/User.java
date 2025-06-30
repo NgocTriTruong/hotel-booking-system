@@ -23,10 +23,14 @@ public class User implements UserDetails {
     @NotBlank(message = "Email is required")
     @Column(unique = true)
     private String email;
+
     @NotBlank(message = "Name is required")
     private String name;
+
     @NotBlank(message = "Phone number is required")
     private String phoneNumber;
+
+    @NotBlank(message = "Password is required")
     private String password;
     private String role;
 
