@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import ApiService from '../../service/ApiService';
+import { useTranslation } from "react-i18next";
 
 const RoomSearch = ({ handleSearchResult }) => {
   const [startDate, setStartDate] = useState(null);
@@ -9,6 +10,8 @@ const RoomSearch = ({ handleSearchResult }) => {
   const [roomType, setRoomType] = useState('');
   const [roomTypes, setRoomTypes] = useState([]);
   const [error, setError] = useState('');
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const fetchRoomTypes = async () => {
@@ -61,29 +64,29 @@ const RoomSearch = ({ handleSearchResult }) => {
     <section>
       <div className="search-container">
         <div className="search-field">
-          <label>Check-in Date</label>
+          <label>{t("rooms.checkIn")}</label>
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             dateFormat="dd/MM/yyyy"
-            placeholderText="Select Check-in Date"
+            placeholderText={t("rooms.selectCheckIN")}
           />
         </div>
         <div className="search-field">
-          <label>Check-out Date</label>
+          <label>{t("rooms.checkOut")}</label>
           <DatePicker
             selected={endDate}
             onChange={(date) => setEndDate(date)}
             dateFormat="dd/MM/yyyy"
-            placeholderText="Select Check-out Date"
+            placeholderText={t("rooms.selectCheckOUT")}
           />
         </div>
 
         <div className="search-field">
-          <label>Room Type</label>
+          <label>{t("rooms.viewRoomType")}</label>
           <select value={roomType} onChange={(e) => setRoomType(e.target.value)}>
             <option disabled value="">
-              Select Room Type
+              {t("rooms.selectRoomType")}
             </option>
             {roomTypes.map((roomType) => (
               <option key={roomType} value={roomType}>
@@ -93,7 +96,7 @@ const RoomSearch = ({ handleSearchResult }) => {
           </select>
         </div>
         <button className="home-search-button" onClick={handleInternalSearch}>
-          Search Rooms
+          {t("rooms.searchRooms")}
         </button>
       </div>
       {error && <p className="error-message">{error}</p>}

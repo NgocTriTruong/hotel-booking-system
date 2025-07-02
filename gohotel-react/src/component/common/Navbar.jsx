@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import ApiService from "../../service/ApiService";
 import { useTranslation } from "react-i18next";
+
 
 function Navbar() {
 
@@ -9,10 +10,10 @@ function Navbar() {
     const isAdmin = ApiService.isAdmin();
     const isUser = ApiService.isUser();
     const navigate = useNavigate();
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const handleLogout = () => {
-        const isLogout = window.confirm('Are you sure you want to logout this user?');
+        const isLogout = window.confirm('' + t('nav.confirm')); // Confirm before logout
         if (isLogout) {
             ApiService.logout();
             navigate("/home");
@@ -31,21 +32,25 @@ function Navbar() {
                 <NavLink to="/home">GoHotel</NavLink>
             </div>
             <ul className="navbar-ul">
-                <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>                    
-                <li><NavLink to="/rooms" activeClassName="active">Rooms</NavLink></li>                    
-                <li><NavLink to="/find-booking" activeClassName="active">Find My Booking</NavLink></li>   
+                <li><NavLink to="/home" activeClassName="active">{t('nav.home')}</NavLink></li>                    
+                <li><NavLink to="/rooms" activeClassName="active">{t('nav.rooms')}</NavLink></li>                    
+                <li><NavLink to="/find-booking" activeClassName="active">{t('nav.findBooking')}</NavLink></li>   
 
-                {isUser && <li><NavLink to="/profile" activeClassName="active">Profile</NavLink></li>}
-                {isAdmin && <li><NavLink to="/admin" activeClassName="active">Admin</NavLink></li>}
+                {isUser && <li><NavLink to="/profile" activeClassName="active">{t('nav.profile')}</NavLink></li>}
+                {isAdmin && <li><NavLink to="/admin" activeClassName="active">{t('nav.admin')}</NavLink></li>}
 
-                {!isAuthenticated && <li><NavLink to="/login" activeClassName="active">Login</NavLink></li>}   
-                {!isAuthenticated && <li><NavLink to="/register" activeClassName="active">Register</NavLink></li>} 
+                {!isAuthenticated && <li><NavLink to="/login" activeClassName="active">{t('nav.login')}</NavLink></li>}   
+                {!isAuthenticated && <li><NavLink to="/register" activeClassName="active">{t('nav.register')}</NavLink></li>} 
 
-                {isAuthenticated && <li onClick={handleLogout} className="logoutPage">Logout</li>}
+                {isAuthenticated && <li onClick={handleLogout} className="logoutPage">{t('nav.logout')}</li>}
 
-                <li>
-                    <button onClick={() => changeLanguage('en')}>English</button>
-                    <button onClick={() => changeLanguage('vi')}>Tiếng Việt</button>
+                <li className="language-dropdown">
+                    <div className={`language-option ${i18n.language === "en" ? "active" : ""}`} onClick={() => changeLanguage('en')}>
+                        <img src="/assets/images/flag-uk.png" alt="English flag" width="25" height="18" />
+                    </div>
+                    <div className={`language-option ${i18n.language === "vi" ? "active" : ""}`} onClick={() => changeLanguage('vi')}>
+                        <img src="/assets/images/flag-vn.png" alt="Vietnamese flag" width="25" height="18" />
+                    </div>
                 </li>
             </ul>
 
