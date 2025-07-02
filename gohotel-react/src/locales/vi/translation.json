@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "rooms": "Phòng",
+    "findBooking": "Tìm đặt phòng",
+    "profile": "Hồ sơ",
+    "admin": "Quản trị",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất",
+    "confirm": "Bạn có chắc chắn muốn đăng xuất người dùng này không?"
+  },
+  "home": {
+    "welcome": "Chào mừng đến với",
+    "slogan": "Bước vào thiên đường của sự thoải mái và chăm sóc",
+    "checkIn": "Ngày nhận phòng",
+    "checkOut": "Ngày trả phòng",
+    "roomType": "Loại phòng",
+    "allRooms": "Tất cả phòng",
+    "searchRooms": "Tìm phòng",
+    "services": "Dịch vụ tại",
+    "airConditioning": "Điều hòa không khí",
+    "airDesc": "Giữ mát và thoải mái suốt kỳ nghỉ với điều hòa cá nhân trong phòng.",
+    "miniBar": "Quầy bar mini",
+    "miniDesc": "Thưởng thức các loại đồ uống và đồ ăn nhẹ tiện lợi trong quầy bar mini phòng với không chi phí bổ sung.",
+    "parking": "Bãi đỗ xe",
+    "parkingDesc": "Chúng tôi cung cấp bãi đỗ xe tại chỗ cho sự tiện lợi của bạn. Vui lòng hỏi về dịch vụ đỗ xe có người phục vụ nếu có.",
+    "wifi": "WiFi",
+    "wifiDesc": "Kết nối suốt kỳ nghỉ với WiFi tốc độ cao miễn phí có sẵn trong tất cả các phòng và khu vực công cộng."
+  },
+  "rooms": {
+    "allRooms": "Tất cả phòng",
+    "filter": "Lọc theo loại phòng: ",
+    "checkIn": "Ngày nhận phòng",
+    "checkOut": "Ngày trả phòng",
+    "viewRoomType": "Loại phòng",
+    "searchRooms": "Tìm phòng",
+    "editRooms": "Chỉnh sửa phòng",
+    "priceRoom": "Giá",
+    "description": "Mô tả",
+    "viewBookNow": "Xem và Đặt ngay",
+    "selectCheckIN": "Chọn ngày nhận phòng",
+    "selectCheckOUT": "Chọn ngày trả phòng",
+    "selectRoomType": "Chọn loại phòng"
+  },
+  "roomDetails": {
+    "title": "Chi tiết phòng",
+    "existingBooking": "Chi tiết đặt phòng hiện tại",
+    "bookNow": "Đặt ngay",
+    "goBack": "Quay lại",
+    "bookingInfo": {
+        "checkInDate": "Ngày nhận phòng",
+        "checkOutDate": "Ngày trả phòng",
+        "numberOfAdults": "Người lớn",
+        "numberOfChildren": "Trẻ em"
+    },
+    "confirmBookingButton": "Xác nhận đặt phòng"
+  },
+  "findBooking": {
+    "title": "Tìm đặt phòng",
+    "enterCode": "Nhập mã xác nhận đặt phòng",
+    "find": "Tìm",
+    "bookingDetails": {
+        "bookingDetails": "Chi tiết đặt phòng",
+        "bookingCode": "Mã xác nhận: ",
+        "checkInDate": "Ngày nhận phòng: ",
+        "checkOutDate": "Ngày trả phòng: ",
+        "numberOfAdults": "Số lượng người lớn: ",
+        "numberOfChildren": "Số lượng trẻ em: ",
+        "userDetails": "Thông tin người dùng",
+        "name": "Tên: ",
+        "email": "Email: ",
+        "phone": "Số điện thoại: ",
+        "roomDetails": "Chi tiết phòng: ",
+        "roomType": "Loại phòng: "
+    }
+  },
+  "profile": {
+    "welcome": "Chào mừng, ",
+    "myProfile": "Thông tin hồ sơ của tôi",
+    "email": "Email: ",
+    "phone": "Số điện thoại: ",
+    "bookingHistory": "Lịch sử đặt phòng của tôi",
+    "editProfile": "Chỉnh sửa hồ sơ",
+    "logout": "Đăng xuất",
+    "bookingCode": "Mã đặt phòng: ",
+    "checkInDate": "Ngày nhận phòng: ",
+    "checkOutDate": "Ngày trả phòng: ",
+    "totalGuests": "Tổng số khách: ",
+    "roomType": "Loại phòng: ",
+    "noBookingsFound": "Không tìm thấy đặt phòng."
+  },
+  "editProfile": {
+    "title": "Chỉnh sửa hồ sơ",
+    "name": "Tên đầy đủ",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "deleteProfile": "Xóa hồ sơ"
+  },
+
+  "register": {
+        "title": "Đăng ký",
+        "name": "Họ và tên",
+        "phone": "Số điện thoại",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "confirmPassword": "Xác nhận mật khẩu",
+        "registerButton": "Đăng ký",
+        "successMessage": "Người dùng đã đăng ký thành công",
+        "errorMessage": {
+        "emptyFields": "Vui lòng điền tất cả các trường",
+        "passwordMismatch": "Mật khẩu không khớp"
+        },
+        "userExists": "Bạn đã có tài khoản?",
+        "loginHere": "Đăng nhập"
+    }, 
+  "login": {
+    "title": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "loginButton": "Đăng nhập",
+    "forgotPassword": "Quên mật khẩu?",
+    "noAccount": "Chưa có tài khoản?",
+    "registerHere": "Đăng ký",
+    "errorMessage": {
+        "invalidCredentials": "Email hoặc mật khẩu không hợp lệ"
+    }
+  },
+  "admin": {
+      "dashboard": "Chào mừng",
+      "manageRooms": {
+          "title": "Quản lý phòng",
+          "allRooms": "Tất cả phòng",
+          "addRoom": {
+              "title": "Thêm phòng mới",
+              "roomType": "Loại phòng",
+              "selectRoomType": "Chọn loại phòng",
+              "price": "Giá phòng",
+              "description": "Mô tả phòng",
+              "addButton": "Thêm phòng",
+              "addConfirmation": "Bạn có chắc chắn muốn thêm phòng này không?",
+              "successMessage": "Thêm phòng thành công",
+              "errorMessage": {
+                  "emptyFields": "Vui lòng điền tất cả các trường",
+                  "roomExists": "Loại phòng đã tồn tại"
+              }
+          },
+          "filter": "Lọc theo loại phòng:",
+          "filterAll": "Tất cả",
+          "editRoom": {
+              "title": "Chỉnh sửa phòng",
+              "roomType": "Loại phòng",
+              "price": "Giá phòng",
+              "description": "Mô tả phòng",
+              "updateButton": "Cập nhật phòng",
+              "deleteButton": "Xóa phòng",
+              "successMessage": "Cập nhật phòng thành công",
+              "errorMessage": {
+                  "emptyFields": "Vui lòng điền tất cả các trường",
+                  "roomNotFound": "Không tìm thấy phòng"
+              }
+          },
+          "deleteRoom": "Xóa phòng",
+          "deleteConfirmation": "Bạn có muốn xóa phòng này không?",
+          "deleteSuccess": "Xóa phòng thành công",
+          "noRoomsFound": "Không tìm thấy phòng."
+      },
+      "manageBookings":{
+          "title": "Quản lý đặt phòng",
+          "allBookings": "Tất cả đặt phòng",
+          "filter": "Lọc theo số đặt phòng:",
+          "filterInput": "Nhập số đặt phòng",
+          "bookingList": "Danh sách đặt phòng",
+          "bookingCode": "Mã đặt phòng",
+          "checkInDate": "Ngày nhận phòng",
+          "checkOutDate": "Ngày trả phòng",
+          "totalGuests": "Tổng số khách",
+          "manageBooking": {
+              "title": "Chi tiết đặt phòng",
+              "confirmationCode": "Mã xác nhận",
+              "checkInDate": "Ngày nhận phòng",
+              "checkOutDate": "Ngày trả phòng",
+              "numberOfAdults": "Số lượng người lớn",
+              "numberOfChildren": "Số lượng trẻ em",
+              "guestEmail": "Email khách",
+              "booker": "Thông tin người đặt",
+              "name": "Họ và tên",
+              "email": "Email",
+              "phone": "Số điện thoại",
+              "roomDetails": "Chi tiết phòng",
+              "roomType": "Loại phòng",
+              "roomPrice": "Giá phòng",
+              "roomDescription": "Mô tả phòng",
+              "achieveBooking": "Lưu trữ đặt phòng",
+              "achieveConfirmation": "Bạn có chắc chắn muốn lưu trữ đặt phòng này không?"
+            }
+      },
+      "viewBookings": "Xem đặt phòng",
+      "userManagement": "Quản lý người dùng",
+      "viewUsers": "Xem người dùng",
+      "deleteUser": "Xóa người dùng"
+    }
+}
