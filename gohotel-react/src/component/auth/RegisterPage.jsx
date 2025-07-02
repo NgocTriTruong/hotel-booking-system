@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ApiService from '../../service/ApiService';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 function RegisterPage() {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -65,28 +67,28 @@ function RegisterPage() {
         <div className="auth-container">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         {successMessage && <p className="success-message">{successMessage}</p>}
-            <h2>Sign Up</h2>
+            <h2>{t("register.title")}</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Name:</label>
+                    <label>{t("register.name")}:</label>
                     <input type="text" name="name" value={formData.name} onChange={handleInputChange} required />
                 </div>
                 <div className="form-group">
-                    <label>Email:</label>
+                    <label>{t("register.email")}:</label>
                     <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
                 </div>
                 <div className="form-group">
-                    <label>Phone Number:</label>
+                    <label>{t("register.phone")}:</label>
                     <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} required />
                 </div>
                 <div className="form-group">
-                    <label>Password:</label>
+                    <label>{t("register.password")}:</label>
                     <input type="password" name="password" value={formData.password} onChange={handleInputChange} required />
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit">{t("register.registerButton")}</button>
             </form>
             <p className="register-link">
-                Already have an account? <a href="/login">Login</a>
+                {t("register.userExists")} <a href="/login">{t("register.loginHere")}</a>
             </p>
         </div>
     );

@@ -1,0 +1,203 @@
+{
+    "nav": {
+        "home": "Home",
+        "rooms": "Rooms",
+        "findBooking": "Find My Booking",
+        "profile": "Profile",
+        "admin": "Admin",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout",
+        "confirm": "Are you sure you want to logout this user?"
+    },
+    "home": {
+        "welcome": "Welcome to",
+        "slogan": "Step into a haven of comfort and care",
+        "checkIn": "Check-in Date",
+        "checkOut": "Check-out Date",
+        "roomType": "Room Type",
+        "searchRooms": "Search Rooms",
+        "allRooms": "All Rooms",
+        "services": "Services at",
+        "airConditioning": "Air Conditioning",
+        "airDesc": "Stay cool and comfortable throughout your stay with our individually controlled in-room air conditioning.",
+        "miniBar": "Mini Bar",
+        "miniDesc": "Enjoy a convenient selection of beverages and snacks stocked in your room's mini bar with no additional cost.",
+        "parking": "Parking",
+        "parkingDesc": "We offer on-site parking for your convenience. Please inquire about valet parking options if available.",
+        "wifi": "WiFi",
+        "wifiDesc": "Stay connected throughout your stay with complimentary high-speed WiFi access available in all guest rooms and public areas."
+    },
+    "rooms": {
+        "allRooms": "All Rooms",
+        "filter": "Filter by Room Type: ",
+        "checkIn": "Check-in Date",
+        "checkOut": "Check-out Date",
+        "viewRoomType": "Room Type",
+        "searchRooms": "Search Rooms",
+        "editRooms": "Edit Rooms",
+        "priceRoom": "Price",
+        "description": "Description",
+        "viewBookNow": "View/Book Now",
+        "selectCheckIN": "Select Check-in Date",
+        "selectCheckOUT": "Select Check-out Date",
+        "selectRoomType": "Select Room Type"
+    },
+    "roomDetails": {
+        "title": "Room Details",
+        "existingBooking": "Existing Booking Details",
+        "bookNow": "Book Now",
+        "goBack": "Go Back",
+        "bookingInfo": {
+            "checkInDate": "Check-in Date",
+            "checkOutDate": "Check-out Date",
+            "numberOfAdults": "Adults",
+            "numberOfChildren": "Children"
+        },
+        "confirmBookingButton": "Confirm Booking"
+    },
+    "findBooking": {
+        "title": "Find Booking",
+        "enterCode": "Enter your booking confirmation code",
+        "bookingDetails": {
+            "bookingDetails": "Booking Details",
+            "bookingCode": "Confirmation Code: ",
+            "checkInDate": "Check-in Date: ",
+            "checkOutDate": "Check-out Date: ",
+            "numberOfAdults": "Num Of Adults: ",
+            "numberOfChildren": "Num Of Children: ",
+            "userDetails": "Booker Details",
+            "name": "Name: ",
+            "email": "Email: ",
+            "phone": "Phone Number: ",
+            "roomDetails": "Room Details",
+            "roomType": "Room Type: "
+        },
+        "find": "Find"
+    },
+    "profile": {
+        "welcome": "Welcome, ",
+        "myProfile": "My Profile Details",
+        "email": "Email: ",
+        "phone": "Phone Number: ",
+        "bookingHistory": "My Booking History",
+        "editProfile": "Edit Profile",
+        "logout": "Logout",
+        "bookingCode": "Booking Code: ",
+        "checkInDate": "Check-in Date: ",
+        "checkOutDate": "Check-out Date: ",
+        "totalGuests": "Total Guests: ",
+        "roomType": "Room Type: ",
+        "noBookingsFound": "No bookings found."
+    },
+    "editProfile": {
+        "title": "Edit Profile",
+        "name": "Full Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "deleteProfile": "Delete Profile"
+    },
+
+    "register": {
+        "title": "Sign Up",
+        "name": "Full Name",
+        "phone": "Phone Number",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "registerButton": "Register",
+        "successMessage": "User registered successfully",
+        "errorMessage": {
+        "emptyFields": "Please fill in all fields",
+        "passwordMismatch": "Passwords do not match"
+        },
+        "userExists": "Already have an account?",
+        "loginHere": "Login"
+    }, 
+    "login": {
+        "title": "Login",
+        "email": "Email",
+        "password": "Password",
+        "loginButton": "Login",
+        "forgotPassword": "Forgot Password?",
+        "successMessage": "Login successful",
+        "noAccount": "Don't have an account?",
+        "registerHere": "Register",
+        "errorMessage": {
+            "invalidCredentials": "Invalid email or password"
+        }
+    },
+    "admin": {
+        "dashboard": "Welcome",
+        "manageRooms": {
+            "title": "Manage Rooms",
+            "allRooms": "All Rooms",
+            "addRoom": {
+                "title": "Add New Room",
+                "roomType": "Room Type",
+                "selectRoomType": "Select a room type",
+                "price": "Room Price",
+                "description": "Room Description",
+                "addButton": "Add Room",
+                "addConfirmation": "Are you sure you want to add this room?",
+                "successMessage": "Room added successfully",
+                "errorMessage": {
+                    "emptyFields": "Please fill in all fields",
+                    "roomExists": "Room type already exists"
+                }
+            },
+            "filter": "Filter by Room Type:",
+            "filterAll": "All",
+            "editRoom": {
+                "title": "Edit Room",
+                "roomType": "Room Type",
+                "price": "Room Price",
+                "description": "Room Description",
+                "updateButton": "Update Room",
+                "deleteButton": "Delete Room",
+                "successMessage": "Room updated successfully",
+                "errorMessage": {
+                    "emptyFields": "Please fill in all fields",
+                    "roomNotFound": "Room not found"
+                }
+            },
+            "deleteRoom": "Delete Room",
+            "deleteConfirmation": "Do you want to delete this room?",
+            "deleteSuccess": "Room deleted successfully",
+            "noRoomsFound": "No rooms found."
+        },
+        "manageBookings":{
+            "title": "Manage Bookings",
+            "allBookings": "All Bookings",
+            "filter": "Filter by Booking number:",
+            "filterInput": "Enter booking number",
+            "bookingList": "Booking List",
+            "bookingCode": "Booking Code",
+            "checkInDate": "Check-in Date",
+            "checkOutDate": "Check-out Date",
+            "totalGuests": "Total Guests",
+            "manageBooking": {
+                "title": "Booking Details",
+                "confirmationCode": "Confirmation Code",
+                "checkInDate": "Check-in Date",
+                "checkOutDate": "Check-out Date",
+                "numberOfAdults": "Number of Adults",
+                "numberOfChildren": "Number of Children",
+                "guestEmail": "Guest Email",
+                "booker": "Booker Details",
+                "name": "Name",
+                "email": "Email",
+                "phone": "Phone Number",
+                "roomDetails": "Room Details",
+                "roomType": "Room Type",
+                "roomPrice": "Room Price",
+                "roomDescription": "Room Description",
+                "achieveBooking": "Archive Booking",
+                "achieveConfirmation": "Are you sure you want to Archive this booking?"
+            }
+        },
+        "userManagement": "User Management",
+        "viewUsers": "View Users",
+        "deleteUser": "Delete User"
+    }
+}
