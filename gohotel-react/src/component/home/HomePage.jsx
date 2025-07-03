@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import RoomResult from "../common/RoomResult";
 import RoomSearch from "../common/RoomSearch";
 
-
+import { useTranslation } from "react-i18next";
 
 
 const HomePage = () => {
@@ -14,6 +14,8 @@ const HomePage = () => {
         setRoomSearchResults(results);
     };
 
+    const { t, i18n } = useTranslation();
+
     return (
         <div className="home">
             {/* HEADER / BANNER ROOM SECTION */}
@@ -23,9 +25,9 @@ const HomePage = () => {
                     <div className="overlay"></div>
                     <div className="animated-texts overlay-content">
                         <h1>
-                            Welcome to <span className="gohotel-color">GoHotel</span>
+                            {t('home.welcome')} <span className="gohotel-color">GoHotel</span>
                         </h1><br />
-                        <h3>Step into a haven of comfort and care</h3>
+                        <h3>{t('home.slogan')}</h3>
                     </div>
                 </header>
             </section>
@@ -34,37 +36,37 @@ const HomePage = () => {
             <RoomSearch handleSearchResult={handleSearchResult} />
             <RoomResult roomSearchResults={roomSearchResults} />
 
-            <h4><a className="view-rooms-home" href="/rooms">All Rooms</a></h4>
+            <h4><a className="view-rooms-home" href="/rooms">{t('rooms.allRooms')}</a></h4>
 
-            <h2 className="home-services">Services at <span className="gohotel-color">GoHotel</span></h2>
+            <h2 className="home-services">{t('home.services')} <span className="gohotel-color">GoHotel</span></h2>
 
             {/* SERVICES SECTION */}
             <section className="service-section"><div className="service-card">
                 <img src="./assets/images/ac.png" alt="Air Conditioning" />
                 <div className="service-details">
-                    <h3 className="service-title">Air Conditioning</h3>
-                    <p className="service-description">Stay cool and comfortable throughout your stay with our individually controlled in-room air conditioning.</p>
+                    <h3 className="service-title">{t('home.airConditioning')}</h3>
+                    <p className="service-description">{t('home.airDesc')}</p>
                 </div>
             </div>
                 <div className="service-card">
                     <img src="./assets/images/mini-bar.png" alt="Mini Bar" />
                     <div className="service-details">
-                        <h3 className="service-title">Mini Bar</h3>
-                        <p className="service-description">Enjoy a convenient selection of beverages and snacks stocked in your room's mini bar with no additional cost.</p>
+                        <h3 className="service-title">{t('home.miniBar')}</h3>
+                        <p className="service-description">{t('home.miniDesc')}</p>
                     </div>
                 </div>
                 <div className="service-card">
                     <img src="./assets/images/parking.png" alt="Parking" />
                     <div className="service-details">
-                        <h3 className="service-title">Parking</h3>
-                        <p className="service-description">We offer on-site parking for your convenience . Please inquire about valet parking options if available.</p>
+                        <h3 className="service-title">{t('home.parking')}</h3>
+                        <p className="service-description">{t('home.parkingDesc')}</p>
                     </div>
                 </div>
                 <div className="service-card">
                     <img src="./assets/images/wifi.png" alt="WiFi" />
                     <div className="service-details">
-                        <h3 className="service-title">WiFi</h3>
-                        <p className="service-description">Stay connected throughout your stay with complimentary high-speed Wi-Fi access available in all guest rooms and public areas.</p>
+                        <h3 className="service-title">{t('home.wifi')}</h3>
+                        <p className="service-description">{t('home.wifiDesc')}</p>
                     </div>
                 </div>
 

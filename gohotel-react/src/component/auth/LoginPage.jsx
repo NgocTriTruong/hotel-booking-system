@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate,useLocation } from "react-router-dom";
 import ApiService from "../../service/ApiService";
+import { useTranslation } from "react-i18next";
 
 function LoginPage() {
+    const { t } = useTranslation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -36,11 +38,11 @@ function LoginPage() {
 
     return (
         <div className="auth-container">
-            <h2>Login</h2>
+            <h2>{t('login.title')}</h2>
             {error && <p className="error-message">{error}</p>}
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label>Email: </label>
+                    <label>{t('login.email')}</label>
                     <input
                         type="email"
                         value={email}
@@ -49,7 +51,7 @@ function LoginPage() {
                     />
                 </div>
                 <div className="form-group">
-                    <label>Password: </label>
+                    <label>{t('login.password')}</label>
                     <input
                         type="password"
                         value={password}
@@ -57,11 +59,11 @@ function LoginPage() {
                         required
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit">{t('login.loginButton')}</button>
             </form>
 
             <p className="register-link">
-                Don't have an account? <a href="/register">Register</a>
+                {t('login.noAccount')} <a href="/register">{t('login.registerHere')}</a>
             </p>
         </div>
     );

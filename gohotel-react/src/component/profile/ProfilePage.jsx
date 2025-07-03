@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ApiService from '../../service/ApiService';
+import { useTranslation } from "react-i18next";
 
 const ProfilePage = () => {
     const [user, setUser] = useState(null);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
+
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const fetchUserProfile = async () => {
@@ -34,35 +37,35 @@ const ProfilePage = () => {
 
     return (
         <div className="profile-page">
-            {user && <h2>Welcome, {user.name}</h2>}
+            {user && <h2>{t('profile.welcome')}, {user.name}</h2>}
             <div className="profile-actions">
-                <button className="edit-profile-button" onClick={handleEditProfile}>Edit Profile</button>
-                <button className="logout-button" onClick={handleLogout}>Logout</button>
+                <button className="edit-profile-button" onClick={handleEditProfile}>{t('profile.editProfile')}</button>
+                <button className="logout-button" onClick={handleLogout}>{t('profile.logout')}</button>
             </div>
             {error && <p className="error-message">{error}</p>}
             {user && (
                 <div className="profile-details">
-                    <h3>My Profile Details</h3>
-                    <p><strong>Email:</strong> {user.email}</p>
-                    <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
+                    <h3>{t('profile.myProfile')}</h3>
+                    <p><strong>{t('profile.email')}:</strong> {user.email}</p>
+                    <p><strong>{t('profile.phone')}:</strong> {user.phoneNumber}</p>
                 </div>
             )}
             <div className="bookings-section">
-                <h3>My Booking History</h3>
+                <h3>{t('profile.bookingHistory')}</h3>
                 <div className="booking-list">
                     {user && user.bookings.length > 0 ? (
                         user.bookings.map((booking) => (
                             <div key={booking.id} className="booking-item">
-                                <p><strong>Booking Code:</strong> {booking.bookingConfirmationCode}</p>
-                                <p><strong>Check-in Date:</strong> {booking.checkInDate}</p>
-                                <p><strong>Check-out Date:</strong> {booking.checkOutDate}</p>
-                                <p><strong>Total Guests:</strong> {booking.totalNumOfGuest}</p>
-                                <p><strong>Room Type:</strong> {booking.room.roomType}</p>
+                                <p><strong>{t('profile.bookingCode')}:</strong> {booking.bookingConfirmationCode}</p>
+                                <p><strong>{t('profile.checkInDate')}:</strong> {booking.checkInDate}</p>
+                                <p><strong>{t('profile.checkOutDate')}:</strong> {booking.checkOutDate}</p>
+                                <p><strong>{t('profile.totalGuests')}:</strong> {booking.totalNumOfGuest}</p>
+                                <p><strong>{t('profile.roomType')}:</strong> {booking.room.roomType}</p>
                                 <img src={booking.room.roomPhotoUrl} alt="Room" className="room-photo" />
                             </div>
                         ))
                     ) : (
-                        <p>No bookings found.</p>
+                        <p>{t('profile.noBookingsFound')}</p>
                     )}
                 </div>
             </div>
