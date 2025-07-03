@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     color: #666;
     /* box-sizing: border-box; */
     overflow-x: hidden;
@@ -872,6 +872,7 @@ p {
     border-radius: 5px;
     font-size: 14px;
     resize: none;
+    margin-top: 5px;
 }
 
 .edit-room-form .form-group textarea {

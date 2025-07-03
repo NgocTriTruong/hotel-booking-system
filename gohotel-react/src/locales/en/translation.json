@@ -76,7 +76,7 @@
         "find": "Find"
     },
     "profile": {
-        "welcome": "Welcome, ",
+        "welcome": "Welcome",
         "myProfile": "My Profile Details",
         "email": "Email: ",
         "phone": "Phone Number: ",
@@ -135,6 +135,8 @@
             "addRoom": {
                 "title": "Add New Room",
                 "roomType": "Room Type",
+                "other":"Other (please specify)",
+                "newType":"Enter new room type",
                 "selectRoomType": "Select a room type",
                 "price": "Room Price",
                 "description": "Room Description",

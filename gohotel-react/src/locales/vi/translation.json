@@ -2,7 +2,7 @@
   "nav": {
     "home": "Trang chủ",
     "rooms": "Phòng",
-    "findBooking": "Tìm đặt phòng",
+    "findBooking": "Tìm phòng đã đặt",
     "profile": "Hồ sơ",
     "admin": "Quản trị",
     "login": "Đăng nhập",
@@ -76,7 +76,7 @@
     }
   },
   "profile": {
-    "welcome": "Chào mừng, ",
+    "welcome": "Chào mừng",
     "myProfile": "Thông tin hồ sơ của tôi",
     "email": "Email: ",
     "phone": "Số điện thoại: ",
@@ -134,6 +134,8 @@
           "addRoom": {
               "title": "Thêm phòng mới",
               "roomType": "Loại phòng",
+              "other": "Khác (vui lòng chỉ định)",
+              "newType": "Nhập loại phòng mới",
               "selectRoomType": "Chọn loại phòng",
               "price": "Giá phòng",
               "description": "Mô tả phòng",

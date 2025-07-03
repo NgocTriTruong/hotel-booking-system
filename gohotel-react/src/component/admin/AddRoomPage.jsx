@@ -126,13 +126,13 @@ const AddRoomPage = () => {
                         {roomTypes.map(type => (
                             <option key={type} value={type}>{type}</option>
                         ))}
-                        <option value="new">Other (please specify)</option>
+                        <option value="new">{t('admin.manageRooms.addRoom.other')}</option>
                     </select>
                     {newRoomType && (
                         <input
                             type="text"
                             name="roomType"
-                            placeholder="Enter new room type"
+                            placeholder={t('admin.manageRooms.addRoom.newType')}
                             value={roomDetails.roomType}
                             onChange={handleChange}
                         />
