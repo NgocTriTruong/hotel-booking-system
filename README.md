@@ -10,7 +10,7 @@
 
 ### 👤 User
 - View all available hotel rooms.
-- Filter rooms by type (e.g., Single, Double, VIP).
+- Filter rooms by type.
 - Search rooms by check-in and check-out date.
 - Book a room (no payment integration).
 - Track booking history and status.
